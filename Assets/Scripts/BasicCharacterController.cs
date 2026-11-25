@@ -109,6 +109,11 @@ public class BasicCharacterController : MonoBehaviour
             animator.SetTrigger("salto");
         }
 
+        if (Keyboard.current.bKey.wasPressedThisFrame)
+        { 
+            animator.SetTrigger("baile"); 
+        }
+
         verticalVelocity.y += gravity * Time.deltaTime;
 
         Vector3 velocity = movement + verticalVelocity;
